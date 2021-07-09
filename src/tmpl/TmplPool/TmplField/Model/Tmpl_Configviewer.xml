@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <TmplField_Configviewer>
+            <active>true</active>
+            <codePool>TmplFieldPool</codePool>
+        </TmplField_Configviewer>
+    </modules>
+</config>
