@@ -4,17 +4,4 @@
             <version>0.1.0</version>
         </TmplField_Configviewer>
     </modules>
-    <global>
-        <events>
-            <controller_front_init_routers>
-                <observers>
-                    <TmplField_configviewer_model_oberver>
-                        <type>singleton</type>
-                        <class>TmplField_Configviewer_Model_Observer</class>
-                        <method>checkForConfigRequest</method>
-                    </TmplField_configviewer_model_oberver>
-                </observers>
-            </controller_front_init_routers>
-        </events>
-    </global>
 </config>
