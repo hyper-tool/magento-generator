@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * 2012-2017 D1m Group
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0) that is available
+ * through the world-wide-web at this URL: http://www.opensource.org/licenses/OSL-3.0
+ * If you are unable to obtain it through the world-wide-web, please send an email
+ * to sales@d1m.cn so we can send you a copy immediately.
+ *
+ * @author D1m Group
+ * @copyright 2012-2017 D1m Group
+ * @license http://www.opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="D1m_Tag::index" title="Tag" translate="title" module="D1m_Tag" sortOrder="20" parent="D1m" action="tag/index" resource="D1m_Tag::index"/>
+        <add id="D1m_Tag::upload" title="Tag upload" translate="title" module="D1m_Tag" sortOrder="20" parent="D1m" action="tag/index/upload" resource="D1m_Tag::upload"/>
+        <add id="D1m_Tag::display" title="Tag display" translate="title" module="D1m_Tag" sortOrder="20" parent="D1m" action="tag/index/display" resource="D1m_Tag::display"/>
+    </menu>
+</config>

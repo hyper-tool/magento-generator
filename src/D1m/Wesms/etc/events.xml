@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * 2012-2017 D1m Group
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0) that is available
+ * through the world-wide-web at this URL: http://www.opensource.org/licenses/OSL-3.0
+ * If you are unable to obtain it through the world-wide-web, please send an email
+ * to sales@d1m.cn so we can send you a copy immediately.
+ *
+ * @author D1m Group
+ * @copyright 2012-2017 D1m Group
+ * @license http://www.opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+
+    <!--safety check-->
+    <event name="controller_action_predispatch_rest_wesms_index_send">
+        <observer name="captcha" instance="D1m\Wesms\Observer\CheckSecurityObserver" />
+    </event>
+
+    <!--verify register by mobile sms code-->
+    <!--<event name="controller_action_predispatch_rest_customer_account_createbymobilepost">
+        <observer name="captcha_validate_sms_createbymobilepost" instance="D1m\Wesms\Observer\CheckValidCodeObserver" />
+    </event>-->
+
+    <!--send sms for customer create success-->
+    <!--<event name="customer_register_success">
+        <observer name="d1m_customer_register_success_send_sms" instance="D1m\Wesms\Observer\sendSMSForCustomerCreateSuccess" />
+    </event>-->
+
+    <!--verify invoice sms code-->
+    <!--<event name="controller_action_predispatch_rest_customer_account_invoice">
+        <observer name="captcha_validate_sms_invoice" instance="D1m\Wesms\Observer\CheckValidCodeObserver" />
+    </event>-->
+
+    <!--verify socaillogin check sms code-->
+    <!--<event name="controller_action_predispatch_rest_sociallogin_customer_checkpost">
+        <observer name="captcha_validate_sms_sociallogin_customer_checkpost" instance="D1m\Wesms\Observer\CheckValidCodeObserver" />
+    </event>-->
+
+    <!--verify socaillogin binding sms code-->
+    <!--<event name="controller_action_predispatch_rest_sociallogin_customer_bindingpost">
+        <observer name="captcha_validate_sms_sociallogin_customer_bindingpost" instance="D1m\Wesms\Observer\CheckValidCodeObserver" />
+    </event>-->
+
+    <!--verify register sms code-->
+    <!--<event name="controller_action_predispatch_rest_customer_account_createpost">
+        <observer name="captcha_validate_sms_createpost" instance="D1m\Wesms\Observer\CheckValidCodeObserver" />
+    </event>-->
+
+    <!--verify login by mobile sms code-->
+    <!--<event name="controller_action_predispatch_rest_customer_account_loginbymobilepost">
+        <observer name="captcha_validate_sms_loginbymobilepost" instance="D1m\Wesms\Observer\CheckValidCodeObserver" />
+    </event>-->
+
+    <!--verify the sms code when reset the password-->
+    <!--<event name="controller_action_predispatch_rest_customer_account_forgotpasswordbymobilepost">
+        <observer name="captcha_validate_sms_forgetbymobilepost" instance="D1m\Wesms\Observer\CheckValidCodeObserver" />
+    </event>
+
+    <event name="controller_action_predispatch_rest_customer_account_resetpasswordbymobilepost">
+        <observer name="captcha_validate_sms_resetbymobilepost" instance="D1m\Wesms\Observer\CheckValidCodeObserver" />
+    </event>
+
+    <event name="controller_action_predispatch_rest_customer_account_forgotpasswordpost">
+        <observer name="captcha_validate_sms_forgotpasswordpost" instance="D1m\Wesms\Observer\CheckValidCodeObserver" />
+    </event>-->
+
+    <!--verify the sms code when edit mobile-->
+    <!--<event name="controller_action_predispatch_rest_customer_account_editpost">
+        <observer name="captcha_validate_sms_editpost" instance="D1m\Wesms\Observer\CheckValidCodeObserver" />
+    </event>-->
+
+    <!--<event name="checkout_submit_all_after">
+        <observer name="sms_checkout_submit_all_after" instance="D1m\Wesms\Observer\sendSMSForOrderCreate" />
+    </event>-->
+
+    <!--verify arrival notice request sms code-->
+    <!--<event name="controller_action_predispatch_rest_notice_index_arrivalnoticepost">
+        <observer name="captcha_validate_sms_notice_index_arrivalnoticepost" instance="D1m\Wesms\Observer\CheckValidCodeObserver" />
+    </event>-->
+
+    <event name="notice_arrival_notice_send_sms">
+        <observer name="notice_arrival_notice_send_sms" instance="D1m\Wesms\Observer\sendSMSForArrivalNotice" />
+    </event>
+
+    <!--<event name="notice_arrival_notice_request_send_sms">
+        <observer name="notice_arrival_notice_request_send_sms" instance="D1m\Wesms\Observer\sendSMSForArrivalNoticeRequest" />
+    </event>-->
+
+    <!--order payment success sms notify-->
+    <event name="payment_accept_notify">
+        <observer name="sms_when_order_invoice_pay" instance="D1m\Wesms\Observer\sendSMSForOrderPay" />
+    </event>
+
+
+    <!--order shipping sms notify for oms api-->
+    <event name="order_shipped_success">
+        <observer name="sms_order_shipped" instance="D1m\Wesms\Observer\sendSMSForOrderShipped" />
+    </event>
+
+    <!--order shipping sms notify for backend-->
+    <!--<event name="email_shipment_set_template_vars_before">
+        <observer name="order_shipment_backend" instance="D1m\Wesms\Observer\sendSMSForOrderShipmentBackend" />
+    </event>-->
+
+    <!--order refund sms notify for oms api-->
+    <event name="order_refund_success">
+        <observer name="sms_order_refund" instance="D1m\Wesms\Observer\sendSMSForOrderRefund" />
+    </event>
+
+    <event name="order_complete_success">
+        <observer name="sms_order_complete" instance="D1m\Wesms\Observer\sendSMSForOrderComplete" />
+    </event>
+    <event name="quote_remind">
+        <observer name="quote_remind" instance="D1m\Wesms\Observer\sendSMSForQuoteRemind" />
+    </event>
+
+    <event name="order_canceled_by_oms_success">
+        <observer name="sms_order_by_oms_canceled" instance="D1m\Wesms\Observer\sendSMSForOrderCanceled" />
+    </event>
+
+    <event name="sms_order_add_invoice_url">
+        <observer name="sms_order_add_invoice_url" instance="D1m\Wesms\Observer\sendSMSForOrderAddInvoiceUrl" />
+    </event>
+
+    <event name="sms_order_update_invoice_url">
+        <observer name="sms_order_update_invoice_url" instance="D1m\Wesms\Observer\sendSMSForOrderUpdateInvoiceUrl" />
+    </event>
+
+    <event name="order_pickup_remind">
+        <observer name="sms_order_pickup_remind" instance="D1m\Wesms\Observer\sendSMSForOrderPickupRemind" />
+    </event>
+
+    <!--order refund sms notify for backend-->
+    <event name="sales_order_payment_refund">
+        <observer name="sms_order_payment_refund" instance="D1m\Wesms\Observer\sendSMSForOrderPaymentRefund" />
+    </event>
+    <!--order refund sms notify for backend creditmemo refund-->
+    <!--<event name="sales_order_creditmemo_refund">
+        <observer name="sms_order_creditmemo_refund" instance="D1m\Wesms\Observer\sendSMSForCreditmemoRefund" />
+    </event>-->
+
+    <!--oms order receiving-->
+    <event name="oms_order_receiving">
+        <observer name="sms_oms_order_receiving" instance="D1m\Wesms\Observer\sendSMSForOmsOrderReceiving" />
+    </event>
+
+    <!--order pick up reminder-->
+    <event name="order_pick_up_reminder">
+        <observer name="sms_order_pick_up_reminder" instance="D1m\Wesms\Observer\sendSMSForOmsOrderPickUpReminder" />
+    </event>
+
+    <!--order Rma Authorized-->
+    <event name="order_rma_authorized">
+        <observer name="sms_order_rma_authorized" instance="D1m\Wesms\Observer\sendSMSForOrderRmaAuthorized" />
+    </event>
+
+    <!--order Rma Received-->
+    <event name="order_rma_received">
+        <observer name="sms_order_rma_received" instance="D1m\Wesms\Observer\sendSMSForOrderRmaReceived" />
+    </event>
+
+    <!--order Rma Approved-->
+    <event name="order_rma_approved">
+        <observer name="sms_order_rma_approved" instance="D1m\Wesms\Observer\sendSMSForOrderRmaApproved" />
+    </event>
+</config>

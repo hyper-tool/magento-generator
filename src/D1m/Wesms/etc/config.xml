@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * 2012-2017 D1m Group
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0) that is available
+ * through the world-wide-web at this URL: http://www.opensource.org/licenses/OSL-3.0
+ * If you are unable to obtain it through the world-wide-web, please send an email
+ * to sales@d1m.cn so we can send you a copy immediately.
+ *
+ * @author D1m Group
+ * @copyright 2012-2017 D1m Group
+ * @license http://www.opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <system>
+            <media_storage_configuration>
+                <allowed_resources>
+                    <d1m_folder>wesms</d1m_folder>
+                </allowed_resources>
+            </media_storage_configuration>
+        </system>
+        <sms_setting>
+            <sms>
+                <sms_methods>1</sms_methods>
+                <service_url></service_url>
+                <captcha_usr></captcha_usr>
+                <captcha_pwd></captcha_pwd>
+                <notice_usr></notice_usr>
+                <notice_pwd></notice_pwd>
+                <yunxin_captcha_usr></yunxin_captcha_usr>
+                <yunxin_captcha_pwd></yunxin_captcha_pwd>
+                <service_token></service_token>
+                <alisms_access_key_id></alisms_access_key_id>
+                <alisms_access_key_secret></alisms_access_key_secret>
+                <alisms_sign_name></alisms_sign_name>
+                <gz_usr>blljlecercletz</gz_usr>
+                <gz_pwd>v8SR4k</gz_pwd>
+            </sms>
+            <sms_template>
+                <register_enable>0</register_enable>
+                <register_sms_template></register_sms_template>
+                <mobile_login_enable>0</mobile_login_enable>
+                <mobile_login_template></mobile_login_template>
+                <bind_enable>0</bind_enable>
+                <bind_template></bind_template>
+                <forgotpassword_login_enable>0</forgotpassword_login_enable>
+                <forgotpassword_login_template></forgotpassword_login_template>
+                <forgetpwd_enable>0</forgetpwd_enable>
+                <forgetpwd_sms_template></forgetpwd_sms_template>
+                <pay_enable>0</pay_enable>
+                <pay_sms_template></pay_sms_template>
+                <ship_enable>0</ship_enable>
+                <ship_sms_template></ship_sms_template>
+                <refund_enable>0</refund_enable>
+                <refund_sms_template></refund_sms_template>
+                <processing_enable>0</processing_enable>
+                <processing_sms_template></processing_sms_template>
+                <remind_enable>0</remind_enable>
+                <remind_sms_template></remind_sms_template>
+                <canceled_enable>0</canceled_enable>
+                <canceled_sms_template></canceled_sms_template>
+                <refunded_enable>0</refunded_enable>
+                <refunded_sms_template></refunded_sms_template>
+                <shipped_enable>0</shipped_enable>
+                <shipped_sms_template></shipped_sms_template>
+                <create_success_enable>0</create_success_enable>
+                <create_success_sms_template></create_success_sms_template>
+                <edit_mobile_enable>0</edit_mobile_enable>
+                <edit_mobile_sms_template></edit_mobile_sms_template>
+                <arrival_notice_enable>0</arrival_notice_enable>
+                <arrival_notice_sms_template></arrival_notice_sms_template>
+                <arrival_notice_request_enable>0</arrival_notice_request_enable>
+                <arrival_notice_request_sms_template></arrival_notice_request_sms_template>
+                <news_enable>0</news_enable>
+                <news_sms_template></news_sms_template>
+                <registration_welcome_enable>0</registration_welcome_enable>
+                <registration_welcome_template></registration_welcome_template>
+                <complete_enable>0</complete_enable>
+                <complete_sms_template></complete_sms_template>
+                <invoice_url_enable>0</invoice_url_enable>
+                <invoice_url_sms_template></invoice_url_sms_template>
+                <invoice_url_update_enable>0</invoice_url_update_enable>
+                <invoice_url_update_sms_template></invoice_url_update_sms_template>
+            </sms_template>
+            <sms_security>
+                <enable>1</enable>
+                <sms_code_lifetime>300</sms_code_lifetime>
+                <number_interval>60</number_interval>
+                <number_limit>30</number_limit>
+                <arrival_notice_captcha_limit>10</arrival_notice_captcha_limit>
+                <ip_limit>200</ip_limit>
+            </sms_security>
+        </sms_setting>
+    </default>
+</config>
